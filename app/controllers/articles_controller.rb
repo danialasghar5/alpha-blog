@@ -1,4 +1,7 @@
 class ArticlesController < ApplicationController
+	#article find method is calling here first time before any action
+	before_action :set_article, only: [:edit,:update,:show,:destroy]
+
 	#index action method
 	def index
 		@articles = Article.all
@@ -23,12 +26,12 @@ class ArticlesController < ApplicationController
 
 	#edit action method
 	def edit
-		@article = Article.find(params[:id])
+		#this method calls above -> @article = Article.find(params[:id])
 	end
 
 	#update action method
 	def update
-		@article = Article.find(params[:id])
+		#this method calls above -> @article = Article.find(params[:id])
 		if @article.update(article_params)
 			flash[:notice]= "Article was successfully Updated"
 			redirect_to article_path(@article)
@@ -39,7 +42,7 @@ class ArticlesController < ApplicationController
 
 	#delete action method
 	def destroy
-		@article = Article.find(params[:id])
+		#this method calls above -> @article = Article.find(params[:id])
 		@article.destroy
 		flash[:notice]="Article was successfully Deleted"
 		redirect_to articles_path
@@ -47,10 +50,13 @@ class ArticlesController < ApplicationController
 
 	#show action method
 	def show
-		@article = Article.find(params[:id])
+		#this method calls above -> @article = Article.find(params[:id])
 	end
 
 	private
+		def set_article
+			@article = Article.find(params[:id])
+		end
 		def article_params
 			params.require(:article).permit(:title,:description)
 		end
