@@ -4,4 +4,6 @@ Rails.application.routes.draw do
 #root as home
 root 'wellcome#home'
 get 'about', to: 'wellcome#about'
+
+resources :articles
 end
