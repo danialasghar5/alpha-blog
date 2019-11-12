@@ -1,5 +1,5 @@
 {
-  "name": "test_app",
+  "name": "alpha_blog",
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
@@ -10,7 +10,7 @@
   },
   "version": "0.1.0",
   "engines":{
-    "node": "10.15.3",
+   
     "npm" : "3.5.2"
   },
   "devDependencies": {
