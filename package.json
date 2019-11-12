@@ -10,7 +10,7 @@
   },
   "version": "0.1.0",
   "engines":{
-    "node": "8.10.0",
+    "node": "10.15.3",
     "npm" : "3.5.2"
   },
   "devDependencies": {
