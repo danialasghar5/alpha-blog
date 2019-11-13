@@ -6,7 +6,8 @@ ruby '2.6.3'
 gem "aws-sdk-s3", require: false
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.1'
-
+#postgre sql
+#
 #adding jquery
 gem 'jquery-rails'
 

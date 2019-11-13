@@ -16,7 +16,7 @@
 				</div>
 			<!--Title Text field Area-->
 				<div class='col-sm-8'>
-					<%= f.text_field :title, class:"form-control",placeholder:"Enter Title",autofocus: true%>
+					<%= f.text_field :title, class:"form-control", placeholder:"Enter Title", autofocus: true%>
 				</div>
 			</div>
 <!------------------------description--------------------------------->
@@ -26,15 +26,15 @@
 					<%= f.label :description %>
 				</div>
 
-			<!--Desc text Area-->
+				<!--Desc text Area-->
 				<div class='col-sm-8'>
-					<%= f.text_area :description,rows:10,class:"form-control",placeholder:"Enter Description",autofocus:true %>
+					<%= f.text_area :description, rows:10, class:"form-control", placeholder:"Enter Description", autofocus:true %>
 				</div>
 			</div>
 <!------------------------Submit Button--------------------------------->
 				<div class="form-group">
 					<div class="col-sm-offset-2 col-sm-10">
-						<%= f.submit class: 'btn btn-primary btn-lg' %>	
+						<%= f.submit 'Submit', class: 'btn btn-primary btn-lg' %>	
 					</div>
 				</div>
 
