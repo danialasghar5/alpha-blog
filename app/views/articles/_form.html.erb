@@ -1,16 +1,13 @@
-<% if @article.errors.any? %>
-<h2>The following errors prevented the article from getting created</h2>
-<ul>
-	<% @article.errors.full_messages.each do |msg| %>
-	<li><%= msg %></li>
-	<% end %>
-</ul>
-<% end %>
+<!------------------------rendering errors partials------------------------------>
+<%= render "shared/errors", obj: @article%>
+
+<!------------------------Form Area------------------------------------->
+
 
 <div class ='row'>
 	<div class='col-xs-12'>
 		<%= form_for(@article, :html => {class: "form-horizontal", role: "form"}) do |f| %>
-<!------------------------Title Area------------------------------------->
+<!------------------------Title------------------------------------->
 			<!--Title label Area-->
 			<div class='form-group'>
 				<div class= 'control-label col-sm-2'>
@@ -21,8 +18,8 @@
 					<%= f.text_field :title, class:"form-control",placeholder:"Enter Title",autofocus: true%>
 				</div>
 			</div>
-<!------------------------description area--------------------------------->
-			<!--Desc label Area-->
+<!------------------------description--------------------------------->
+			<!--Desc label -->
 			<div class='form-group'>
 				<div class= 'control-label col-sm-2'>
 					<%= f.label :description %>
@@ -33,7 +30,7 @@
 					<%= f.text_area :description,rows:10,class:"form-control",placeholder:"Enter Description",autofocus:true %>
 				</div>
 			</div>
-<!------------------------Submit Button area--------------------------------->
+<!------------------------Submit Button--------------------------------->
 				<div class="form-group">
 					<div class="col-sm-offset-2 col-sm-10">
 						<%= f.submit class: 'btn btn-primary btn-lg' %>	
