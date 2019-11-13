@@ -6,11 +6,12 @@ ruby '2.6.3'
 gem "aws-sdk-s3", require: false
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.1'
-# adding bootstrap
-#gem 'bootstrap', '~> 4.3.1'
 
 #adding jquery
 gem 'jquery-rails'
+
+# adding bootstrap
+gem 'bootstrap-sass'
 
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
@@ -34,7 +35,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 #
-gem 'bootstrap-sass'
+#gem 'bootstrap-sass'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
