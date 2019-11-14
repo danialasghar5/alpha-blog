@@ -6,4 +6,7 @@ root 'wellcome#home'
 get 'about', to: 'wellcome#about'
 
 resources :articles
+
+get 'signup', to: 'users#new'
+resources :users, except: [:new]
 end

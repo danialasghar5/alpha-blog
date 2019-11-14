@@ -11,6 +11,9 @@ gem 'rails', '~> 6.0.1'
 #adding jquery
 gem 'jquery-rails'
 
+#adding bcrypt
+gem 'bcrypt', '~> 3.1.7'
+
 # adding bootstrap
 gem 'bootstrap-sass'
 
