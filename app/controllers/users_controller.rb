@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 	#usr find method is calling every time when function call
 	before_action :set_user,only: [:edit,:update,:show,:destroy]
 	def index
-		@users = User.all
+		@users = User.paginate(page: params[:page], per_page: 2)
 	end
 	def new
 		@user = User.new
@@ -31,7 +31,8 @@ class UsersController < ApplicationController
 	end
 
 	def show
-
+		# this method call above first time when start -> @user = User.find(params[:id])
+		@users_articles = @user.articles.paginate(page: params[:page], per_page: 2)
 	end
 
 	def destroy
